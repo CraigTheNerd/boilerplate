@@ -1,0 +1,159 @@
+//
+//  Import Styles
+//  ====================
+@import 'colors'
+@import 'fonts'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+@media all and (min-width: $mobile)
+    section#lax
+        position: relative
+        .simpleParallax
+            max-height: 60vh
+            position: relative
+            img.laxCtaImage
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: middle
+        #lax-cta-wrapper
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            #lax-cta-title
+                margin: 0 0 20px 0
+                width: 100%
+                h2.lax-cta-title
+                    text-align: center
+                    color: whitesmoke
+            #lax-cta-link
+                text-align: center
+                a.lax-cta-link
+                    background: $link
+                    color: whitesmoke
+                    padding: 10px 25px
+                    border-radius: 50px
+                    &:hover
+                        background: $linkHover
+                        transition: all ease 300ms
+    section#about-parallax
+        position: relative
+        .simpleParallax
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            position: relative
+            max-height: 60vh
+            img.aboutHeader
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: bottom
+            img.thumbnail
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: middle
+        #lax-wrapper
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            .lax-title
+                color: whitesmoke
+    section#products-parallax
+        position: relative
+        .simpleParallax
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            position: relative
+            max-height: 60vh
+            img.thumbnail
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: bottom
+            img.thumbnail
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: middle
+        #lax-wrapper
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            .lax-title
+                color: whitesmoke
+    section#services-parallax
+        position: relative
+        .simpleParallax
+            display: flex
+            align-items: flex-end
+            justify-content: flex-start
+            position: relative
+            max-height: 60vh
+            img.pageHeader
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: bottom
+            img.thumbnail
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: middle
+        #lax-wrapper
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            .lax-title
+                color: whitesmoke
+    section#contact-parallax
+        position: relative
+        .simpleParallax
+            display: flex
+            align-items: flex-start
+            justify-content: center
+            position: relative
+            max-height: 60vh
+            img.pageHeader
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: bottom
+            img.thumbnail
+                max-width: 100%
+                height: auto
+                box-sizing: border-box
+                vertical-align: middle
+        #lax-wrapper
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            .lax-title
+                color: whitesmoke

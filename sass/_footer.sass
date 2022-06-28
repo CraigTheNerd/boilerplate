@@ -1,0 +1,171 @@
+//
+//  Import Styles
+//  ====================
+@import 'colors'
+@import 'fonts'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+@media all and (min-width: $mobile)
+	footer#footer
+		width: 100%
+		background: $footer
+		margin: 0 auto
+		padding: 0
+		#footer-wrapper
+			margin: 0 auto
+			width: 100%
+			padding: 0 10%
+			#footer-grid
+				display: grid
+				grid-template-columns: repeat(1, 5fr)
+				column-gap: 10px
+				row-gap: 3em
+				padding: 40px 0
+				#footer-col
+					color: whitesmoke
+					background: transparent //rgba(255, 0, 0, 0.2)
+					#footer-logo
+						img.footer-logo
+							height: 55px
+							width: auto
+							filter: grayscale(100%)
+					#footer-copyright
+						p.footer-copyright
+							font-size: 0.8rem
+							padding: 20px 0
+					h3.footer-title
+						text-transform: uppercase
+						padding-bottom: 20px
+					ul.footer-list
+						list-style: none
+						li.footer-list
+							padding: 10px 0
+							a.footer-list
+								text-decoration: none
+								color: whitesmoke
+								font-size: 0.9rem
+								text-transform: uppercase
+								&:hover
+									color: $primary
+					p.footer-location
+						color: whitesmoke
+						font-size: 0.9rem
+						text-transform: uppercase
+						padding: 10px 0
+					p.footer-contact
+						font-size: 0.9rem
+						a.footer-contact
+							text-decoration: none
+							color: whitesmoke
+							&:hover
+								color: $primary
+					.footer-social
+						padding: 20px 0
+						.footer-social-icon
+							a.footer-social-icon
+								width: 30px
+								height: 30px
+								background: whitesmoke
+								border-radius: 100px
+								text-align: center
+								color: whitesmoke
+								margin: 0 20px 0 0
+								display: inline-block
+								float: left
+								position: relative
+								cursor: pointer
+								i
+									position: absolute
+									z-index: 5
+									color: #252a32
+									top: 50%
+									left: 50%
+									transform: translate(-50%, -50%)
+								&:hover
+									background: $primary
+
+			#footer-credits
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 100%
+				padding: 20px 0
+				color: white
+				font-size: 0.75rem
+				border-top: 1px solid rgba(255,255,255, 0.1)
+				p.footer-credits
+					color: whitesmoke
+					text-align: center
+					a
+						text-decoration: none
+						color: whitesmoke
+						font-weight: bold
+						&:hover
+							color: $primary
+						img
+							padding: 10px 0 0 0
+							width: 100px
+							height: auto
+
+@media all and (min-width: $tabletMedium)
+	footer#footer
+		#footer-wrapper
+			#footer-grid
+				display: grid
+				grid-template-columns: repeat(5, 1fr)
+				#footer-col
+					#footer-copyright
+						p.footer-copyright
+							font-size: 0.7rem
+					//h3.footer-title
+					ul.footer-list
+						li.footer-list
+							a.footer-list
+								font-size: 0.7rem
+								&:hover
+									transition: ease all 0.3s
+					p.footer-location
+						color: whitesmoke
+						font-size: 0.7rem
+						text-transform: uppercase
+						padding: 15px 0
+					p.footer-contact
+						font-size: 0.7rem
+						a.footer-contact
+							&:hover
+								transition: ease all 0.3s
+					.footer-social
+						padding: 20px 0
+						.footer-social-icon
+							a.footer-social-icon
+								&:hover
+									transition: ease all 0.3s
+									i
+										color: whitesmoke
+										transition: ease all 0.3s
+			#footer-credits
+				font-size: 0.65rem
+				p.footer-credits
+					a
+						&:hover
+							transition: ease all 0.3s

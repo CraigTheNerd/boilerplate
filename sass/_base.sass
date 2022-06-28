@@ -1,0 +1,157 @@
+//
+//  Import Styles
+//  ====================
+@import 'colors'
+@import 'fonts'
+
+@import 'header'
+@import 'footer'
+
+@import 'styles'
+@import 'parallax'
+
+@import 'form'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+//
+//  Reset Styles
+//  ====================
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+html,
+body
+    background: white
+    height: 100%
+    font-family: 'Poppins', sans-serif
+    font-size: 1rem
+    color: $text
+
+#page
+    height: 100%
+
+.clearfix
+    clear: both
+    display: block
+    visibility: hidden
+
+h1.section-title
+    color: $primary
+    text-align: center
+    padding-top: 0
+    font-weight: bold
+
+h1.page-title
+    color: $primary
+    text-align: center
+    padding-top: 0
+    font-weight: bold
+
+h1.home-title
+    color: $primary
+    text-align: center
+    padding-top: 0
+    font-weight: bold
+
+h1.intro-title
+    color: white
+    text-align: center
+    padding-top: 0
+    font-weight: bold
+
+a
+    text-decoration: none
+    color: $link
+    &:hover
+        color: $linkHover
+
+@keyframes menuLinkFade
+    from
+        opacity: 0
+        transform: translateX(50px)
+        transition: transform 0.5s ease-in
+    to
+        opacity: 1
+        transform: translateX(0px)
+        transition: transform 0.5s ease-in
+
+//
+//  OVERLAY
+//  ====================
+.page-overlay
+    overflow: hidden
+
+//
+//  BACK TO TOP
+//  ====================
+#back-to-top-btn
+    display: none
+    position: fixed
+    bottom: 40px
+    right: 20px
+    font-size: 26px
+    width: 50px
+    height: 50px
+    background-color: $backToTop
+    color: whitesmoke
+    cursor: pointer
+    outline: none
+    border: none
+    border-radius: 50%
+    transition-duration: 0.2s
+    transition-timing-function: ease-in-out
+    transition-property: background-color, color
+    &:hover
+        background-color: $backToTopHover
+        color: whitesmoke
+        opacity: 1
+
+//  Animations  //
+.btnEntrance
+    animation-duration: 0.5s
+    animation-fill-mode: both
+    animation-name: btnEntrance
+
+//  fadeInUp    //
+@keyframes btnEntrance
+    from
+        opacity: 0
+        transform: translate3d(0, 100%, 0)
+    to
+        opacity: 0.5
+        transform: translate3d(0, 0, 0)
+
+.btnExit
+    animation-duration: 0.25s
+    animation-fill-mode: both
+    animation-name: btnExit
+
+//  fadeOutDown //
+@keyframes btnExit
+    from
+        opacity: 1
+    to
+        opacity: 0
+        transform: translate3d(0, 100%, 0)

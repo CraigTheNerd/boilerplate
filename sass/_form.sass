@@ -1,0 +1,240 @@
+//
+//  Import Styles
+//  ====================
+@import 'fonts'
+@import 'colors'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+\:root
+    --error-color: #dc3545
+    --success-color: #28a745
+    --warning-color: #ffc107
+
+@media all and (min-width: $mobile)
+    form
+        width: 100%
+        max-width: 600px
+        .form-field-email
+            margin-bottom: 20px
+            label
+                display: block
+                color: lightslategray
+                margin-bottom: 5px
+            input
+                border: solid 1px rgba(119, 136, 153, 0.35)
+                border-radius: 3px
+                padding: 10px
+                margin-bottom: 5px
+                font-family: 'Poppins', sans-serif
+                font-size: 1rem
+                display: block
+                width: 100%
+                color: rgba(119, 136, 153, 0.75)
+                &:focus
+                    outline: none
+            small
+                color: var(--error-color)
+        .form-field-phone
+            margin-bottom: 30px
+            label
+                display: block
+                color: lightslategray
+                margin-bottom: 5px
+            input
+                border: solid 1px rgba(119, 136, 153, 0.35)
+                border-radius: 3px
+                padding: 10px
+                margin-bottom: 5px
+                font-family: 'Poppins', sans-serif
+                font-size: 1rem
+                display: block
+                width: 100%
+                color: rgba(119, 136, 153, 0.75)
+                &:focus
+                    outline: none
+            small
+                color: var(--error-color)
+        .form-field
+            margin-bottom: 30px
+            label
+                display: block
+                color: lightslategray
+                margin-bottom: 5px
+            input
+                border: solid 1px rgba(119, 136, 153, 0.35)
+                border-radius: 3px
+                padding: 10px
+                margin-bottom: 5px
+                font-family: 'Poppins', sans-serif
+                font-size: 1rem
+                display: block
+                width: 100%
+                color: rgba(119, 136, 153, 0.75)
+                &:focus
+                    outline: none
+            textarea
+                resize: none
+                border: solid 1px rgba(119, 136, 153, 0.35)
+                border-radius: 3px
+                padding: 10px
+                margin-bottom: 5px
+                font-family: 'Poppins', sans-serif
+                font-size: 1rem
+                display: block
+                width: 100%
+                color: rgba(119, 136, 153, 0.75)
+                &:focus
+                    outline: none
+            small
+                color: var(--error-color)
+            .btn
+                width: 100%
+                display: block
+                text-align: center
+                padding: 10px
+                margin: 15px 0 0 0
+                background: $button
+                border: 1px solid $buttonBorder
+                border-radius: 5px
+                font-family: 'Poppins', sans-serif
+                font-size: 1rem
+                color: whitesmoke
+                text-transform: uppercase
+                &:hover
+                    background: $buttonHover
+                    cursor: pointer
+                    transition: all ease 300ms
+                &:focus
+                    outline: none
+        .error input
+            border-color: var(--error-color)
+        .success input
+            border-color: var(--success-color)
+        .error textarea
+            border-color: var(--error-color)
+        .success textarea
+            border-color: var(--success-color)
+        .error-wrapper
+            width: 100%
+            .error-message
+                width: 100%
+                padding: 10px 0
+                margin: 30px 0
+            .error-busy
+                background: rgba(1, 168, 221, 0.25)
+                border: 1px solid rgba(1, 168, 221, 1)
+                border-radius: 5px
+                width: 100%
+                padding: 10px 20px
+                display: flex
+                align-items: flex-start
+                justify-content: flex-start
+                transition: all ease 300ms
+                .busy-icon
+                    i
+                        animation-name: spin
+                        animation-duration: 1600ms
+                        animation-iteration-count: infinite
+                        animation-timing-function: linear
+                        color: rgba(1, 168, 221, 1)
+                        margin: 0
+                        padding: 0
+                        font-size: 1rem
+                p.error-busy-text
+                    padding: 0 0 0 10px
+                    font-family: 'Poppins', sans-serif
+                    font-size: 1rem
+                    font-weight: 600
+                    color: rgba(1, 168, 221, 1)
+                    transition: all ease 300ms
+            .error-fail
+                background: rgba(139, 0, 0, 0.15)
+                border: 1px solid rgba(139, 0, 0, 0.35)
+                border-radius: 5px
+                width: 100%
+                padding: 10px 20px
+                display: flex
+                align-items: flex-start
+                justify-content: flex-start
+                transition: all ease 300ms
+                .fail-icon
+                    padding: 0
+                    i
+                        color: rgba(139, 0, 0, 1)
+                        margin: 0
+                        padding: 0
+                        font-size: 1rem
+                p.error-fail-text
+                    padding: 0 0 0 10px
+                    font-family: 'Poppins', sans-serif
+                    font-size: 1rem
+                    font-weight: 600
+                    color: rgba(139, 0, 0, 1)
+                    transition: all ease 300ms
+            .error-pass
+                transition: all ease 1s
+                background: rgba(0, 100, 0, 0.15)
+                border: 1px solid rgba(0, 100, 0, 0.35)
+                border-radius: 5px
+                width: 100%
+                padding: 10px 20px
+                display: flex
+                align-items: flex-start
+                justify-content: flex-start
+                .pass-icon
+                    padding: 0
+                    i
+                        color: rgba(0, 100, 0, 1)
+                        margin: 0
+                        padding: 0
+                        font-size: 1rem
+                p.error-pass-text
+                    padding: 0 0 0 10px
+                    font-family: 'Poppins', sans-serif
+                    font-size: 1rem
+                    font-weight: 600
+                    color: rgba(0, 100, 0, 1)
+                @keyframes spin
+                    from
+                        transform: rotate(0deg)
+                    to
+                        transform: rotate(360deg)
+        #recaptchaContainer
+            width: 100%
+            padding: 0
+            transform: scale(0.85)
+            transform-origin: 0 0
+            //#captcha1
+
+@media all and (min-width: $tabletSmall)
+    form
+        .form-field-email
+            display: inline-block
+            float: left
+            width: 50%
+            padding: 0 10px 0 0
+        .form-field-phone
+            display: inline-block
+            float: left
+            width: 50%
+            padding: 0 0 0 10px

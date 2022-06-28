@@ -1,0 +1,148 @@
+//
+//  Import Styles
+//  ====================
+@import 'colors'
+@import 'fonts'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+@media all and (min-width: $mobile)
+	section#home
+		background-image: url(../images/home-banner3.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center top
+		min-height: 100%
+		position: relative
+		z-index: 1
+		display: flex
+		justify-content: center
+		align-items: center
+		#home-cta-wrapper
+			position: absolute
+			top: 50%
+			left: 10%
+			transform: translate(0, -50%)
+			//width: 100%
+			//margin: 0 auto
+			//padding: 0 10%
+			//#home-cta-title
+			//	h3.home-cta-title
+			//	h1.home-cta-title
+			#home-cta-text
+				padding: 20px 0
+				max-width: 60%
+				//p.home-cta-text
+			#home-cta-link
+				padding: 30px 0 0 0
+				a.home-cta-link
+					background: $secondary
+					color: whitesmoke
+					padding: 15px 45px
+					border-radius: 50px
+					&:hover
+						background: $primary
+						transition: all ease 300ms
+
+	section#intro
+		background: $primary
+		min-height: 40%
+		#intro-wrapper
+			padding: 40px 0
+
+	section#about
+		background: white
+		min-height: 100vh
+		#about-wrapper
+			padding: 50px 0
+
+	section#products
+		background: whitesmoke
+		min-height: 100%
+		#products-wrapper
+			padding: 50px 0
+
+	section#services
+		background: white
+		min-height: 100%
+		#services-wrapper
+			padding: 50px 0
+
+	section#contact
+		background: whitesmoke
+		width: 100%
+		#page-title
+			width: 100%
+			padding: 40px 0
+		#contact-wrapper
+			padding: 0 10% 40px 10%
+			width: 100%
+			#contact-details-wrapper
+				width: 100%
+				padding: 0 0 40px 0
+			#form-wrapper
+				margin-right: 0
+				width: 100%
+				padding: 0
+		#contact-wrapper-form
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 0 10% 40px 10%
+			width: 100%
+			#contact-form-wrapper
+				width: 100%
+				padding: 0
+				form
+					margin: 0 auto
+@media all and (min-width: $tabletSmall)
+	section#home
+		#home-cta-wrapper
+			top: 40%
+			left: 45%
+			transform: translate(-50%, -50%)
+			#home-cta-text
+				max-width: 70%
+	section#contact
+		#page-title
+			padding: 60px 0
+		#contact-wrapper
+			padding: 0 10% 60px 10%
+			display: flex
+			align-items: flex-start
+			justify-content: center
+			width: 100%
+			#contact-details-wrapper
+				width: 50%
+			#form-wrapper
+				width: 50%
+				margin-left: auto
+				padding: 0
+		#contact-wrapper-form
+			padding: 0 10% 60px 10%
+			display: flex
+			align-items: flex-start
+			justify-content: center
+			width: 100%
+			#contact-form-wrapper
+				width: 100%
+				padding: 0

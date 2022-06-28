@@ -1,0 +1,313 @@
+//
+//  Import Styles
+//  ====================
+@import 'colors'
+
+//
+//  BreakPoints
+//  ====================
+$mobile: 200px
+$android: 360px
+$iphone: 375px
+$androidPlus: 412px
+$iphonePlus: 414px
+$mobileLarge: 600px
+$tabletSmall: 769px
+$tabletMid: 940px
+$tablet: 1020px
+$tabletMedium: 1220px
+$tabletLarge: 1260px
+$laptop: 1340px
+$desktopSmall: 1380px
+$desktopMedium: 1420px
+$desktopLarge: 1660px
+$desktopFull: 1900px
+$wide: 1921px
+
+@media all and (min-width: $mobile)
+	header#header
+		width: 100%
+		background: transparent
+		margin: 0 auto
+		padding: 0
+		position: fixed
+		top: 0
+		left: 0
+		z-index: 9
+		transition: all 500ms
+		#pre-header
+			width: 100%
+			display: block
+			float: left
+			background: transparent
+			padding: 0 10%
+			#pre-header-wrapper
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				border-bottom: 1px solid $preHeaderBorder
+				transition: ease all 0.3s
+				font-size: 0.75rem
+				padding: 5px 0
+				.pre-header-left
+					background: transparent
+					.pre-header-left-element
+						display: inline-block
+						a
+							text-decoration: none
+							color: $preHeader
+							.pre-header-left-element-icon
+								display: inline-block
+								padding-right: 15px
+								font-size: 0.95rem
+							.pre-header-left-element-text
+								display: none
+								padding-right: 10px
+							&:hover
+								color: $primary
+				.pre-header-right
+					margin-left: auto
+					.pre-header-right-element
+						display: inline-block
+						a
+							text-decoration: none
+							color: $preHeader
+							.pre-header-right-element-icon
+								display: inline-block
+								font-size: 0.95rem
+								padding-left: 15px
+							.pre-header-right-element-text
+								display: none
+								padding-left: 5px
+							&:hover
+								color: $primary
+		#header-wrapper
+			background: transparent
+			width: 100%
+			margin: 0 auto
+			padding: 0 10%
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			#brand
+				background: transparent
+				padding: 0
+				.logo
+					line-height: 0
+					padding: 10px 0
+					img
+						color: $primary
+						width: 55px
+						height: 55px
+						transition: all 500ms
+			#menu
+				margin-left: auto
+				padding: 0
+				#navButton.burger
+					position: relative
+					z-index: 9
+					padding: 2px 0 2px 2px
+					cursor: pointer
+					div
+						width: 28px
+						height: 2px
+						background-color: $menuButton
+						margin: 5px 0
+						padding: 0
+						transition: transform 0.5s ease
+				.closeIcon
+					.line1
+						transform: rotate(-45deg) translate(-5px, 5px)
+					.line2
+						opacity: 0
+					.line3
+						transform: rotate(45deg) translate(-5px, -5px)
+				nav#nav
+					ul.nav-items
+						background-color: $menuBg
+						position: fixed
+						right: 0
+						height: 100%
+						top: 0
+						display: block
+						flex-direction: column
+						align-items: center
+						justify-content: space-around
+						width: 260px
+						min-width: 260px
+						transform: translateX(260px)
+						transition: transform 0.5s ease-in
+						z-index: 7
+						li.menuLink:nth-child(1)
+							margin: 100px 20px 20px 30px
+						li.menuLink
+							opacity: 0
+							list-style: none
+							text-align: left
+							margin: 0 0 20px 30px
+							&:hover
+								cursor: pointer
+							a.navLink
+								color: white
+								text-decoration: none
+								&:hover
+									color: $primary
+									text-decoration: none
+								&:active
+									color: $primary
+							a.active
+								color: $primary
+						#nav-footer
+							display: relative
+							position: fixed
+							bottom: 4%
+							right: 0
+							width: 260px
+							opacity: 0
+							background: transparent
+							height: 100px
+							z-index: 999
+							.nav-footer-social
+								padding: 10px 0 20px 0
+								display: flex
+								align-items: center
+								justify-content: center
+								.nav-footer-social-icon
+									a.nav-footer-social-icon
+										width: 30px
+										height: 30px
+										background: whitesmoke
+										border-radius: 100px
+										text-align: center
+										color: whitesmoke
+										margin: 0 5px
+										display: inline-block
+										float: left
+										position: relative
+										cursor: pointer
+										i
+											position: absolute
+											z-index: 5
+											color: $primary
+											top: 50%
+											left: 50%
+											transform: translate(-50%, -50%)
+										&:hover
+											background: $primary
+											i
+												color: whitesmoke
+							#nav-footer-text
+								opacity: 0
+								p.nav-footer-text
+									font-size: 0.7rem
+									color: whitesmoke
+									text-align: center
+							#nav-footer-text.slideInUp
+								animation-name: slideInUp
+								animation-duration: 1s
+								animation-fill-mode: both
+								opacity: 1
+								@keyframes slideInUp
+									0%
+										transform: translateY(100%)
+										visibility: visible
+									100%
+										transform: translateY(0)
+						#nav-footer.slideInUp
+							animation-name: slideInUp
+							animation-duration: 1s
+							animation-fill-mode: both
+							opacity: 1
+							@keyframes slideInUp
+								0%
+									transform: translateY(100%)
+									visibility: visible
+								100%
+									transform: translateY(0)
+				nav#nav.open
+					cursor: default
+					ul.nav-items
+						transform: translateX(0)
+						transition: all 0.5s ease-in
+						cursor: default
+
+
+
+	header#header.shrinkHeader
+		background: white
+		box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1)
+		transition: all 500ms
+		#header-wrapper
+			background: transparent
+			#brand
+				.logo
+					img
+						width: 35px
+						height: 35px
+						transition: all 500ms
+
+@media all and (min-width: $tabletSmall)
+	header#header
+		#pre-header
+			#pre-header-wrapper
+				.pre-header-left
+					.pre-header-left-element
+						a
+							.pre-header-left-element-icon
+								display: inline-block
+							.pre-header-left-element-text
+								display: inline-block
+							&:hover
+								transition: ease all 0.3s
+				.pre-header-right
+					.pre-header-right-element
+						display: inline-block
+						a
+							.pre-header-right-element-icon
+								display: inline-block
+							.pre-header-right-element-text
+								display: inline-block
+							&:hover
+								transition: ease all 0.3s
+		#header-wrapper
+			#menu
+				#navButton.burger
+					display: none
+				nav#nav
+					ul.nav-items
+						background-color: transparent
+						position: relative
+						display: inline-block
+						width: 100%
+						transform: translateX(0px)
+						transition: transform 0.5s ease-in
+						li.menuLink:nth-child(1)
+							margin: 0
+						li.menuLink
+							display: inline-block
+							opacity: 1
+							margin: 0 0 0 1px
+							&:hover
+								cursor: pointer
+							a.navLink
+								background: transparent
+								color: $primary
+								padding: 8px 20px
+								border-radius: 100px
+								font-size: 0.9rem
+								text-decoration: none
+								transition: all 0.3s
+								&:hover
+									background: $primary
+									color: whitesmoke
+							a.active
+								background: $primary
+								color: whitesmoke
+								transition: ease all 300ms
+					#nav-footer
+						display: none
+	header#header.shrinkHeader
+		#pre-header
+			#pre-header-wrapper
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+				transition: ease all 500ms
