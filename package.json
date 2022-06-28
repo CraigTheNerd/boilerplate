@@ -1,0 +1,22 @@
+{
+  "name": "2022dev",
+  "version": "1.0.0",
+  "description": "2022dev",
+  "author": "Craig Christians",
+  "license": "ISC",
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.50.0",
+    "susy": "^2.2.14"
+  }
+}
