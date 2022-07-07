@@ -12,7 +12,7 @@ require 'libs/phpmailer/src/SMTP.php';
 
 //  ReCaptcha Response
 if(isset($_POST['g-recaptcha-response'])) {
-    $secret = "6LeskNQaAAAAAPLkgZ2DTsM_yb97dVtrY5vxKbrc";
+    $secret = "YOUR_SECRET_KEY";
     $user = $_POST['g-recaptcha-response'];
     $json = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$user");
     $result = json_decode($json, true);
